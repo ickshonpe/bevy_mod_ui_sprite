@@ -1,11 +1,18 @@
 [package]
-name = "bevy_ui_sprite"
+name = "bevy_mod_ui_sprite"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT OR Apache-2.0"
+keywords = ["bevy", "sprite", "graphics", "ui", "games"]
+categories = ["game-development", "graphics", "gui"]
+repository = "https://github.com/ickshonpe/bevy_mod_ui_texture_atlas_image"
+readme = "README.md"
+description = "Draw sprites on the Bevy UI"
 
 [dependencies.bevy]
 version = "0.8"
+default_features= false
+features = ["bevy_asset", "render"]
 
-
+[dev-dependencies]
+bevy = "0.8"

@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use bevy_ui_sprite::*;
+use bevy_mod_ui_sprite::*;
 
 fn setup(
     mut commands: Commands,
