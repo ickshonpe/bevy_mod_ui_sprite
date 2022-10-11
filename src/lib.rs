@@ -21,6 +21,7 @@ pub struct UiSpriteBundle {
     pub global_transform: GlobalTransform,
 }
 
+#[allow(clippy::type_complexity)]
 fn extract_texture_atlas_image_uinodes(
     mut extracted_uinodes: ResMut<ExtractedUiNodes>,
     rect_query: Extract<
