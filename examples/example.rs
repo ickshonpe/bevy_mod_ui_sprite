@@ -8,6 +8,7 @@ fn setup(
 
     commands.spawn_bundle(UiSpriteBundle {
         sprite: UiSprite(Vec2::splat(100.)),
+        transform: Transform::from_translation(Vec3::splat(100.)),
         color: UiColor(Color::RED),
         ..Default::default()
     });
