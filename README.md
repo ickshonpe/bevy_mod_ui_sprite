@@ -8,7 +8,7 @@
 Add the dependency to `Cargo.toml`:
 
 ```toml
-bevy_mod_ui_sprite = "0.1"
+bevy_mod_ui_sprite = "0.1.2"
 ```
 
 Add the plugin to your app:
