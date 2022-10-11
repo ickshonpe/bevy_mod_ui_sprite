@@ -12,6 +12,18 @@ fn setup(
         color: UiColor(Color::RED),
         ..Default::default()
     });
+    commands.spawn_bundle(UiSpriteBundle {
+        sprite: UiSprite(Vec2::splat(100.)),
+        transform: Transform::from_translation(Vec3::new(120., 120., 50.)),
+        color: UiColor(Color::GREEN),
+        ..Default::default()
+    });
+    commands.spawn_bundle(UiSpriteBundle {
+        sprite: UiSprite(Vec2::splat(100.)),
+        transform: Transform::from_translation(Vec3::splat(140.)),
+        color: UiColor(Color::BLUE),
+        ..Default::default()
+    });
 }
 
 fn main() {

@@ -24,6 +24,11 @@ fn main() {
         .run()
 }
 ```
+You also need a camera:
+
+```rust
+commands.spawn_bundle(Camera2dBundle::default());
+```
 
 Then you can spawn a UiSpriteBundle:
 
@@ -34,4 +39,10 @@ Then you can spawn a UiSpriteBundle:
     color: UiColor(Color::RED),
     ..Default::default()
 });
+```
+
+## Full Example
+
+```
+cargo --run --example example
 ```
