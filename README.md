@@ -3,7 +3,7 @@
 [![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](https://github.com/ickshonpe/bevy_mod_ui_sprite)
 [![crates.io](https://img.shields.io/crates/d/bevy_mod_ui_sprite)](https://crates.io/crates/bevy_mod_ui_sprite)
 
-Draw sprites, texture atlas sprites, and coloured rectangles with the Bevy UI.
+Draw sprites, texture atlas sprites, and colored rectangles with the Bevy UI.
 
 ![image](example.png)
 
@@ -12,7 +12,7 @@ Draw sprites, texture atlas sprites, and coloured rectangles with the Bevy UI.
 Add the dependency to `Cargo.toml`:
 
 ```toml
-bevy_mod_ui_sprite = "0.2.0"
+bevy_mod_ui_sprite = "0.2.1"
 ```
 
 Add the plugin to your app:

@@ -8,6 +8,7 @@ fn setup(
 ) {
     commands.spawn_bundle(Camera2dBundle::default());
 
+    // colored rectangles
     commands.spawn_bundle(UiSpriteBundle {
         size: SpriteSize::Size(Vec2::splat(100.)),
         transform: Transform::from_translation(Vec3::splat(100.)),
@@ -27,6 +28,7 @@ fn setup(
         ..Default::default()
     });
 
+    // textured sprites
     commands.spawn_bundle(UiSpriteBundle {
         sprite: UiSprite::Image(asset_loader.load("sprite.png")),
         transform: Transform::from_translation(Vec3::new(200., 100., 200.)),
@@ -41,13 +43,15 @@ fn setup(
         ..Default::default()
     });
 
+    // sprites from a texture atlas
     let texture_atlas_texture = asset_loader.load("numbered_grid_texture_atlas.png");
     let texture_atlas = TextureAtlas::from_grid(texture_atlas_texture, Vec2::splat(16.), 4, 4);
     let texture_atlas_handle = texture_atlases.add(texture_atlas);
-    for (y, i) in [2, 7, 15, 9].into_iter().enumerate() {
+    for (n, index) in [2, 7, 15, 9].into_iter().enumerate() {
+        let target = Vec3::new(100. - n as f32 * 8., 50. + n as f32 * 24., 250.);
         commands.spawn_bundle(UiSpriteBundle {
-            sprite: UiSprite::AtlasImage { handle: texture_atlas_handle.clone(), index: i },
-            transform: Transform::from_translation(Vec3::new(100., 50. + y as f32 * 24., 250.)),
+            sprite: UiSprite::AtlasImage { handle: texture_atlas_handle.clone(), index },
+            transform: Transform::from_translation(target),
             ..Default::default()
         });
     }

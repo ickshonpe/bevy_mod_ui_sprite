@@ -89,9 +89,9 @@ fn extract_texture_atlas_image_uinodes(
                             handle.clone(),    
                             Rect { 
                                 min: Vec2::ZERO,
-                                max: match size {
-                                    &SpriteSize::Size(size) => size,
-                                    &SpriteSize::Auto => image.size(),
+                                max: match *size {
+                                    SpriteSize::Size(size) => size,
+                                    SpriteSize::Auto => image.size(),
                                 }
                             },
                             None
