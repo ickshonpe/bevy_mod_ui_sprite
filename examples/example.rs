@@ -48,7 +48,7 @@ fn setup(
     let texture_atlas = TextureAtlas::from_grid(texture_atlas_texture, Vec2::splat(16.), 4, 4);
     let texture_atlas_handle = texture_atlases.add(texture_atlas);
     for (n, index) in [2, 7, 15, 9].into_iter().enumerate() {
-        let target = Vec3::new(100. - n as f32 * 8., 50. + n as f32 * 24., 250.);
+        let target = Vec3::new(96. - n as f32 * 8., 50. + n as f32 * 24., 250.);
         commands.spawn_bundle(UiSpriteBundle {
             sprite: UiSprite::AtlasImage { handle: texture_atlas_handle.clone(), index },
             transform: Transform::from_translation(target),
